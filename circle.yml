@@ -1,0 +1,7 @@
+general:
+  artifacts:
+    - "."
+
+test:
+  override:
+    - echo "Do nothing"
