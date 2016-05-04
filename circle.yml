@@ -1,7 +1,4 @@
-general:
-  artifacts:
-    - "."
-
 test:
   override:
     - echo "Do nothing"
+    - cp -Lr * $CIRCLE_ARTIFACTS/
