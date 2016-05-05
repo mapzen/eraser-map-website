@@ -2,3 +2,9 @@ test:
   override:
     - echo "Do nothing"
     - cp -Lr * $CIRCLE_ARTIFACTS/
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - aws s3 sync $CIRCLE_ARTIFACTS "s3://erasermap.com"
