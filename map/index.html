@@ -23,7 +23,7 @@
       }
 
       var map = L.Mapzen.map('map', {
-        scene: 'zinc'
+        scene: 'bubble-wrap'
       });
       map.setView([lat, lon],13);
 
@@ -44,7 +44,10 @@
       locator.setPosition('bottomright');
       locator.addTo(map);
 
-      L.Mapzen.hash(map, geocoder);
+      L.Mapzen.hash({
+        map: map,
+        geocoder:geocoder
+      });
 
     </script>
   </body>
